@@ -11,7 +11,8 @@
 #define LIBDSP3000_H
 
 #include <stdio.h>
-#include "libdsp3000_struct.h"
+
+#include <libelrob/Etypes.h>
 
 #define CR 0x0D
 #define LF 0x0A
@@ -24,6 +25,15 @@
 #define DSP_CHAR_VALID       '1'
 #define DSP_CHAR_FAULT       '0'
 #define DSP_EARTH_RATE       (DEG2RAD(15.04107)/(3600.0))
+
+typedef struct _DSP3000_Data {
+  MODULENAME    type;
+  double        data;
+  long          meas_id;
+  int           valid;
+  TIMEVAL       avail_time;
+  TIMEVAL       meas_time;
+} DSP3000_Data;
 
 int   DSP3000_OpenPort(char *device, int timeout);
 int   DSP3000_ClosePort();

@@ -7,17 +7,19 @@
 
   description          : interface with the dsp3000
  ***************************************************************************/
+
 #include <stdlib.h>
 #include <termios.h>
 #include <string.h>
 #include <pthread.h>
 #include <unistd.h>
 
-#include "libdsp3000.h"
-#include <elrob/Edebug.h>
-#include <elrob/Emacros.h>
-#include <elrob/serial_easy.h>
-#include <elrob/Etime.h>
+#include <libelrob/Edebug.h>
+#include <libelrob/Emacros.h>
+#include <libelrob/Etime.h>
+#include <libelrob/serial.h>
+
+#include "dsp3000.h"
 
 static pthread_mutex_t  m_mutex_dsp = PTHREAD_MUTEX_INITIALIZER; /* mutex for the continuous capture thread */
 static pthread_attr_t   m_thread_attr_dsp;                       /* the main thread attribute */
