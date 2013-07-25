@@ -1,0 +1,36 @@
+libdsp3000 (0.1-6) unstable; urgency=low
+
+  * Added changelog
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 25 Jul 2013 19:11:00 +0100
+
+libdsp3000 (0.1-5) unstable; urgency=low
+
+  * Added missing pthread dependency
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 03 Mar 2011 12:25:37 +0100
+
+libdsp3000 (0.1-4) unstable; urgency=low
+
+  * Added missing libelrob linkage
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 03 Mar 2011 09:24:26 +0100
+
+libdsp3000 (0.1-3) unstable; urgency=low
+
+  * ReMake build system port
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 03 Mar 2011 09:09:44 +0100
+
+libdsp3000 (0.1) unstable; urgency=low
+
+    * Replaced elrob with smart from directories.
+    * Started refactoring directories.
+
+ -- Dizan Vasquez <dichodaemon@gmail.com>  Tue, 25 Aug 2009 16:19:05 +0200
+
+libdsp3000 (0.1) unstable; urgency=low
+
+    * removed doc/.files directory
+
+ -- Dizan Vasquez <dichodaemon@gmail.com>  Thu, 17 Jul 2008 17:23:52 +0200
