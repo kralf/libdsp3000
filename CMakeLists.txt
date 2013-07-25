@@ -10,7 +10,7 @@ remake_project(
   AUTHOR "Pierre Lamon"
   AUTHOR "Ralf Kaestner"
   CONTACT "ralf.kaestner@gmail.com"
-  HOME "http://aslforge.ethz.ch/projects/libdsp3000"
+  HOME "http://github.com/kralf/libdsp3000"
   LICENSE "GNU Lesser General Public License (LGPL)"
   PREFIX dsp3000-
   INSTALL /usr
@@ -21,15 +21,30 @@ remake_doc(
 )
 
 remake_pack_deb(
-  libdsp3000 libelrob
+  DEPENDS libelrob
 )
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "development headers"
-  libdsp3000 libelrob-dev
+  DEPENDS libdsp3000 libelrob-dev
 )
 remake_pack_deb(
   ARCH all
   COMPONENT doc
   DESCRIPTION "documentation"
+)
+
+remake_distribute_deb(
+  DISTRIBUTION lucid
+  SECTION libs
+  UPLOAD ppa:kralf/asl
+  DEPENDS libelrob-dev remake pkg-config doxygen
+  PASS CMAKE_BUILD_TYPE LIBDSP3000_GIT_REVISION
+)
+remake_distribute_deb(
+  DISTRIBUTION precise
+  SECTION libs
+  UPLOAD ppa:kralf/asl
+  DEPENDS libelrob-dev remake pkg-config doxygen
+  PASS CMAKE_BUILD_TYPE LIBDSP3000_GIT_REVISION
 )

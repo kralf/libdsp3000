@@ -1,3 +1,10 @@
+libdsp3000 (0.1-7) unstable; urgency=low
+
+  * Added pkg-config file
+  * Release distribution
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 25 Jul 2013 19:31:00 +0100
+
 libdsp3000 (0.1-6) unstable; urgency=low
 
   * Added changelog
