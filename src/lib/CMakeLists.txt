@@ -4,6 +4,6 @@ if(NOT ${CMAKE_USE_PTHREADS_INIT})
 endif(NOT ${CMAKE_USE_PTHREADS_INIT})
 
 remake_add_library(dsp3000 PREFIX OFF
-  LINK ${CMAKE_THREAD_LIBS_INIT} ${ELROB_LIBRARY})
+  LINK ${CMAKE_THREAD_LIBS_INIT} ${LIBELROB_LIBRARIES})
 remake_add_headers()
-remake_pkg_config_generate(REQUIRES elrob)
+remake_pkg_config_generate(REQUIRES libelrob)
